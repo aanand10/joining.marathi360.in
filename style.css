@@ -5,6 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
 
 body,
 input,
@@ -58,7 +65,8 @@ form.sign-up-form {
 }
 
 form.sign-in-form {
-  margin-top: -130px;
+  margin-top: -250px;
+  margin-bottom: -100px;
   z-index: 2;
 }
 
