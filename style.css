@@ -10,7 +10,7 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body,
@@ -66,7 +66,7 @@ form.sign-up-form {
 
 form.sign-in-form {
   margin-top: -250px;
-  margin-bottom: -100px;
+  margin-bottom: -150px;
   z-index: 2;
 }
 
@@ -293,6 +293,13 @@ select {
   pointer-events: all;
 }
 
+footer {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin-top: -16px;
+}
+
 @media (max-width: 870px) {
   .container {
     min-height: 800px;
@@ -309,7 +316,11 @@ select {
   .container.sign-up-mode .signin-signup {
     left: 50%;
   }
-
+  form.sign-in-form {
+    margin-top: -254px;
+    margin-bottom: -46px;
+    z-index: 2;
+  }
   .panels-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
