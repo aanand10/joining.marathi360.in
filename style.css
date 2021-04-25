@@ -449,9 +449,9 @@ footer {
   padding: 7px 19px;
   display: block;
   text-align: center;
-  /* position: relative; */
+  position: relative;
   /* right: 50%; */
-  /* bottom: 15px; */
+  bottom: 15px;
   /* margin-right: 100%; */
 
   border-radius: 10px;
