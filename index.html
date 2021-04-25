@@ -14,16 +14,21 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" name="Marathi360_joining" class="sign-in-form">
-            <div class="logo">
+          <form
+            action="#"
+            method="POST"
+            name="Marathi360_joining"
+            class="sign-in-form"
+          >
+            <!-- <div class="logo">
               <img src="New folder (2)/logom360.png" alt="" />
-            </div>
+            </div> -->
             <h2 class="title">Marathi360</h2>
             <h3 class="title-subtitle">WhatsApp Digital Magazine</h3>
             <div class="input-field">
               <i class="fas fa-map-pin"></i>
               <!-- <input type="text" placeholder="Username" /> -->
-              <select name="" id="district">
+              <select name="District" id="district">
                 <option value="" selected>तुमचा जिल्हा ?*</option>
                 <option value="अकोला">अकोला</option>
                 <option value="अमरावती">अमरावती</option>
@@ -67,11 +72,14 @@
               <i class="fas fa-mobile"></i>
               <input
                 id="Whnumber"
+                name="WhatsApp_number"
                 type="text"
                 placeholder="तुमचा WhatsApp क्रमांक ?*"
               />
             </div>
-            <button id="submit" class="btn solid">Join Now</button>
+            <button id="submit" name="submit" class="btn solid">
+              Join Now
+            </button>
 
             <p class="social-text">Follow us on social platforms</p>
             <div class="social-media">
@@ -188,6 +196,19 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--?? script for popup alert -->
     <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzBlVIGo-1UUiP3SYSTZZCONAf7bCS7hab63jJy0L9dIkoIaVb5NRaD/exec";
+      const form = document.forms["Marathi360_joining"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) });
+        // .then((response ) =>
+        //   alert("आपल्या मराठी भाषेत दररोज नवनवीन माहिती मिळवण्याकरिता 7517707880 हा नंबर Marathi360 या नावाने सेव्ह करा. त्यानंतर तुमची मोफत सेवा 24 तासांत सुरु होईल.नंबर सेव्ह केल्याशिवाय आपल्याला अपडेट्स मिळणार नाहीत.")
+        // )
+        // .catch((error) => console.error("Error!", error.message));
+      });
+
       $("#submit").click(function () {
         // swal(
         //   "Good job!",
