@@ -18,7 +18,20 @@ input,
 select {
   font-family: "Poppins", sans-serif;
 }
-
+.logo img {
+  /* background: url("logom360.png"); */
+  position: relative;
+  /* left: 35%; */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 
+/* logo shadow */ 0px 0px 2px #5f5f5f,
+    /* offset */ 0px 0px 0px 5px #ecf0f3, /*bottom right */ 8px 8px 15px #a7aaaf,
+    /* top left */ -8px -8px 15px #ffffff;
+  /* z-index: 1; */
+}
 .container {
   position: relative;
   width: 100%;
@@ -65,7 +78,7 @@ form.sign-up-form {
 }
 
 form.sign-in-form {
-  margin-top: -250px;
+  margin-top: -118px;
   margin-bottom: -150px;
   z-index: 2;
 }
@@ -322,7 +335,7 @@ footer {
     left: 50%;
   }
   form.sign-in-form {
-    margin-top: -140px;
+    margin-top: -100px;
     /* margin-left: 25px;  */
     margin-bottom: -46px;
     z-index: 2;
