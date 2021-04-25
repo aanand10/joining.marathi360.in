@@ -361,7 +361,7 @@ footer {
   }
 
   .panel h3 {
-    font-size: 1.6rem;
+    font-size: 2.3rem;
   }
 
   .panel p {
@@ -455,7 +455,7 @@ footer {
   display: block;
   text-align: center;
   position: relative;
-  right: 40%;
+  right: 70%;
   bottom: 30px;
   /* margin-right: 100%; */
 
