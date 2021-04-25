@@ -435,7 +435,9 @@ footer {
   form {
     padding: 0 1.5rem;
   }
-
+  form h2 .hidden {
+    display: none;
+  }
   .image {
     display: none;
   }
