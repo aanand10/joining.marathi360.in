@@ -14,14 +14,19 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form
+            action="#"
+            method="POST"
+            name="Marathi360_joining"
+            class="sign-in-form"
+          >
             <h2 class="title">Marathi360</h2>
             <h3 class="title-subtitle">WhatsApp Digital Magazine</h3>
             <div class="input-field">
               <i class="fas fa-map-pin"></i>
               <!-- <input type="text" placeholder="Username" /> -->
               <select name="" id="district">
-                <option value="" selected>तुमचा जिल्हा?*</option>
+                <option value="" selected>तुमचा जिल्हा ?*</option>
                 <option value="अकोला">अकोला</option>
                 <option value="अमरावती">अमरावती</option>
                 <option value="अहमदनगर">अहमदनगर</option>
@@ -68,7 +73,7 @@
                 placeholder="तुमचा WhatsApp क्रमांक ?*"
               />
             </div>
-            <button id="submit" class="btn solid">Join Now!</button>
+            <button id="submit" class="btn solid">Join Now</button>
 
             <p class="social-text">Follow us on social platforms</p>
             <div class="social-media">
@@ -153,7 +158,7 @@
           <div class="content">
             <h3>मराठी३६०</h3>
             <p>
-              विविध क्षेत्रातील नवनवीन माहिती मिळवा आपल्या WhatsApp वर, तेही
+              विविध क्षेत्रातील ताज्या घडामोडी मिळवा तुमच्या WhatsaApp वर, तेही
               विनामूल्य आणि आपल्या मातृभाषेत म्हणजेच मराठीत. <br />🚩आपली भाषा
               आपला अभिमान🚩
             </p>
@@ -197,13 +202,13 @@
         var district = $("#district").val();
         var number = $("#Whnumber").val();
         if (district == "" || number == "") {
-          swal("Attention!!!", "Please Fill All Fields!!", "warning");
+          swal("!! Attention !!", "Please Fill All Fields !", "warning");
         } else {
           swal({
-            title: "Successful!",
+            title: "Successful !",
 
             text:
-              "                          तुमची मोफत सेवा सुरू करण्यासाठी खालील बटणावर क्लिक करा.👇",
+              "                          तुमची मोफत सेवा सुरू करण्यासाठी खालील बटणावर क्लिक करा 👇",
             icon: "success",
             button: {
               text: "Join Now",
