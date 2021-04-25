@@ -319,6 +319,7 @@ footer {
   }
   form.sign-in-form {
     margin-top: -140px;
+    /* margin-left: 25px;  */
     margin-bottom: -46px;
     z-index: 2;
   }
