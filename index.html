@@ -20,7 +20,7 @@
             <div class="input-field">
               <i class="fas fa-map-pin"></i>
               <!-- <input type="text" placeholder="Username" /> -->
-              <select required name="" id="">
+              <select required name="" id="district">
                 <option value="" selected>तुमचा जिल्हा?*</option>
                 <option value="अकोला">अकोला</option>
                 <option value="अमरावती">अमरावती</option>
@@ -63,12 +63,14 @@
             <div class="input-field">
               <i class="fas fa-mobile"></i>
               <input
+                id="Whnumber"
                 type="text"
                 required
                 placeholder="तुमचा WhatsApp क्रमांक ?*"
               />
             </div>
-            <input type="submit" value="Join Now!" class="btn solid" />
+            <button id="submit" class="btn solid">Join Now!</button>
+
             <p class="social-text">Follow us on social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon icon-facebook">
@@ -152,6 +154,37 @@
       <div class="center">Copyright &copy; Marathi360 All rights reserved.</div>
     </footer>
 
-    <script src="app.js"></script>
+    <!--?? Included javascripts  -->
+    <!-- <script src="app.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--?? script for popup alert -->
+    <script>
+      $("#submit").click(function () {
+        // swal(
+        //   "Good job!",
+        //   "तुमची मोफत सेवा सुरू करण्यासाठी खालील लिंक वर क्लिक करा.👇",
+        //   "success"
+        // );
+        // if (window.confirm("Ok to Confirm")) {
+        //   window.open("http://www.google.com", "_blank");
+        // }
+        var district = $("#district").val();
+        var number = $("#Whnumber").val();
+        if (district == "" || number == "") {
+          swal("Attention!!!", "Please Fill All Fields!!", "warning");
+        } else {
+          swal(
+            "Good job!",
+            "तुमची मोफत सेवा सुरू करण्यासाठी खालील लिंक वर क्लिक करा.👇",
+            "success"
+          ).then(function () {
+            window.location =
+              "https://web.whatsapp.com/send?phone=917517707880&text=%E0%A4%86%E0%A4%AA%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE+%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80+%E0%A4%AD%E0%A4%BE%E0%A4%B7%E0%A5%87%E0%A4%A4+%E0%A4%A6%E0%A4%B0%E0%A4%B0%E0%A5%8B%E0%A4%9C+%E0%A4%A8%E0%A4%B5%E0%A4%A8%E0%A4%B5%E0%A5%80%E0%A4%A8+%E0%A4%AE%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%80+%E0%A4%AE%E0%A4%BF%E0%A4%B3%E0%A4%B5%E0%A4%A3%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A4%BF%E0%A4%A4%E0%A4%BE+%E0%A4%B9%E0%A4%BE+%E0%A4%A8%E0%A4%82%E0%A4%AC%E0%A4%B0+%2AMarathi360%2A+%E0%A4%AF%E0%A4%BE+%E0%A4%A8%E0%A4%BE%E0%A4%B5%E0%A4%BE%E0%A4%A8%E0%A5%87+%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A5%8D%E0%A4%B9+%E0%A4%95%E0%A4%B0%E0%A4%BE.+%E0%A4%A4%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A8%E0%A4%82%E0%A4%A4%E0%A4%B0+%E0%A4%A4%E0%A5%81%E0%A4%AE%E0%A4%9A%E0%A5%80+%E0%A4%AE%E0%A5%8B%E0%A4%AB%E0%A4%A4+%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE+24+%E0%A4%A4%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%82%E0%A4%A4+%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%81+%E0%A4%B9%E0%A5%8B%E0%A4%88%E0%A4%B2.+%2A%E0%A4%A8%E0%A4%82%E0%A4%AC%E0%A4%B0+%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A5%8D%E0%A4%B9+%E0%A4%95%E0%A5%87%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%AF+%E0%A4%86%E0%A4%AA%E0%A4%B2%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%BE+%E0%A4%85%E0%A4%AA%E0%A4%A1%E0%A5%87%E0%A4%9F%E0%A5%8D%E0%A4%B8+%E0%A4%AE%E0%A4%BF%E0%A4%B3%E0%A4%A3%E0%A4%BE%E0%A4%B0+%E0%A4%A8%E0%A4%BE%E0%A4%B9%E0%A5%80%E0%A4%A4.%2A&app_absent=0";
+          });
+        }
+      });
+    </script>
   </body>
 </html>
