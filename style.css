@@ -41,6 +41,9 @@ select {
   overflow: hidden;
 }
 
+.animated {
+  margin: 7px 0px 7px 0px;
+}
 .forms-container {
   position: absolute;
   width: 100%;
